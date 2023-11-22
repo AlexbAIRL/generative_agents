@@ -374,7 +374,7 @@ class Maze:
       subject: "Isabella Rodriguez"
       tile: The tile coordinate of our interest in (x, y) form.
     OUPUT: 
-      None
+      None:
     """
     curr_tile_ev_cp = self.tiles[tile[1]][tile[0]]["events"].copy()
     for event in curr_tile_ev_cp: 

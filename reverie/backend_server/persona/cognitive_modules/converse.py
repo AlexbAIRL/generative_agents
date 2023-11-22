@@ -243,7 +243,7 @@ def load_history_via_whisper(personas, whispers):
 
     thought = generate_inner_thought(persona, whisper)
 
-    created = persona.scratch.curr_time
+    created = persona.scratch.curr_time #breaks on sim replay, no time is established in the Persona file.
     expiration = persona.scratch.curr_time + datetime.timedelta(days=30)
     s, p, o = generate_action_event_triple(thought, persona)
     keywords = set([s, p, o])
